@@ -1,24 +1,55 @@
 import React, {Component} from 'react';
-import { data } from './Data.js';
+import {data} from './Data.js';
 import '../../../Styles/style.css';
 
 class Docs extends Component {
   render() {
-    return (<div>
-      <div className="list-group shadow">
-        {
-          data.map((value, index) => {
-            return (<a key={index} className="list-group-item list-group-item-action flex-column align-items-start">
-              <div className="d-flex w-100 justify-content-between">
-                <h5 className="mb-1"><b>Url:</b> <a href={value.url}>{value.url}</a></h5>
-                <b><small className="text-muted">{ index + 1 }</small></b>
-              </div>
-              <h6 className="mb-1"><b>Description:</b> {value.description}</h6>
-              <small className="text-muted"><b>Resource:</b> {value.resource}</small>
-            </a>)
-          })
-        }
-      </div>
+    return (<div className="row">
+      {
+        data.map((value, index) => {
+          return (<div key={index} class="col-lg-10 col-md-10 card border-dark mb-3 shadow" style={{
+              width: '40rem',
+              marginLeft: '8%',
+              marginRight: '20px',
+              marginTop: '20px'
+            }}>
+            <div class="card-body">
+              <h6 className="card-title">
+                <b>Path:</b>
+                <a className="shift text-info font-weight-bold">
+                  {value.path}
+                </a>
+              </h6>
+              <br/>
+              <h6 className="card-subtitle mb-2">
+                <b>
+                  Example:
+                </b>
+                <a href={value.url} className="shift text-info font-weight-bold">
+                  {value.url}
+                </a>
+              </h6>
+              <br/>
+              <p className="card-text">
+                <b>
+                  Description:
+                </b>
+                <a className="shift text-info font-weight-bold">{value.description}</a>
+              </p>
+              <br/>
+              <p className="card-text">
+                <b>
+                  Params:
+                </b>
+                <a className="shift text-info font-weight-bold"> {value.params} </a>
+              </p>
+              <a className="card-link text-info font-weight-bold">
+                <span className="badge badge-pill badge-info">{index + 1}</span>
+              </a>
+            </div>
+          </div>);
+        })
+      }
     </div>);
   }
 

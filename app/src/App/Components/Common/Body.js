@@ -12,11 +12,11 @@ class Body extends Component {
 
   render() {
     return (<div>
-      <ul className="nav nav-tabs nav-fill shadow" id="myTab" role="tablist">
+      <ul className="nav nav-tabs nav-fill shadow border-bottom" id="myTab" role="tablist">
         <li className="nav-item">
           <a className="nav-link text-info" id="docs-tab" data-toggle="tab" href="#docs" role="tab" aria-controls="docs" aria-selected="true">
             <b>
-              Api Documetation
+              Api Documetation / Endpoints
             </b>
           </a>
         </li>
@@ -33,6 +33,8 @@ class Body extends Component {
           <br/>
           <div className="container-fluid">
             <Docs />
+            <br />
+
           </div>
         </div>
         <div className="tab-pane fade" id="demo" role="tabpanel" aria-labelledby="demo-tab">
