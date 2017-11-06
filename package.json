@@ -1,0 +1,38 @@
+{
+  "name": "forbes-400",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A simple json api that provides the forbes 400 list ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "build": "cd app && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesseokeya/Forbes400.git"
+  },
+  "keywords": [
+    "Javascript",
+    "Api",
+    "Cheerio",
+    "Npm",
+    "ExpressJs",
+    "NodeJs",
+    "Request"
+  ],
+  "author": "Jesse Okeya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesseokeya/Forbes400/issues"
+  },
+  "homepage": "https://github.com/jesseokeya/Forbes400#readme",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "request": "^2.83.0",
+    "sort-array": "^2.0.0"
+  }
+}
