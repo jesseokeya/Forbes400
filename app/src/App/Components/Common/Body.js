@@ -1,15 +1,10 @@
 import React, {Component} from 'react';
-import { Docs } from './Docs';
+import {Docs} from './Docs';
+import {Examples} from './Examples';
 import '../../../Styles/style.css';
 
 class Body extends Component {
-  constructor() {
-    super();
-    this.state = {
-      valid: true
-    }
-  }
-
+  
   render() {
     return (<div>
       <ul className="nav nav-tabs nav-fill shadow border-bottom" id="myTab" role="tablist">
@@ -32,15 +27,15 @@ class Body extends Component {
         <div className="tab-pane fade show active" id="docs" role="tabpanel" aria-labelledby="docs-tab">
           <br/>
           <div className="container-fluid">
-            <Docs />
-            <br />
+            <Docs/>
+            <br/>
 
           </div>
         </div>
         <div className="tab-pane fade" id="demo" role="tabpanel" aria-labelledby="demo-tab">
           <br/>
           <div className="container-fluid">
-            EXAMPLES / DEMO
+            <Examples/>
           </div>
         </div>
       </div>

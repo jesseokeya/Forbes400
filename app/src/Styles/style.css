@@ -15,5 +15,29 @@ body {
 }
 
 .border-bottom {
-   border: 1px solid black;
+  border: 1px solid black;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.show-loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #273746;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-top: 6%;
+  margin-left: 42vw;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

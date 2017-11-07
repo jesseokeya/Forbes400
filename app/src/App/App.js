@@ -1,14 +1,10 @@
 import React from 'react';
-import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import Layout from './Components/Layout';
-import '../Styles/style.css'
+import Layout from './Components/Layout'
 
 const Main = () => {
-  return (<MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+  return (<div>
     <Layout title="Forbes400"/>
-  </MuiThemeProvider>);
+  </div>);
 }
 
 export default Main;

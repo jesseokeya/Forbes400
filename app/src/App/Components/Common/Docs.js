@@ -7,13 +7,13 @@ class Docs extends Component {
     return (<div className="row">
       {
         data.map((value, index) => {
-          return (<div key={index} class="col-lg-10 col-md-10 card border-dark mb-3 shadow" style={{
+          return (<div key={index} className="col-lg-10 col-md-10 card border-dark mb-3 shadow" style={{
               width: '40rem',
               marginLeft: '8%',
               marginRight: '20px',
               marginTop: '20px'
             }}>
-            <div class="card-body">
+            <div className="card-body">
               <h6 className="card-title">
                 <b>Path:</b>
                 <a className="shift text-info font-weight-bold">
