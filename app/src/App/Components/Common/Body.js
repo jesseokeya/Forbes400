@@ -4,7 +4,7 @@ import {Examples} from './Examples';
 import '../../../Styles/style.css';
 
 class Body extends Component {
-  
+
   render() {
     return (<div>
       <ul className="nav nav-tabs nav-fill shadow border-bottom" id="myTab" role="tablist">
@@ -35,7 +35,15 @@ class Body extends Component {
         <div className="tab-pane fade" id="demo" role="tabpanel" aria-labelledby="demo-tab">
           <br/>
           <div className="container-fluid">
-            <Examples/>
+            <Examples url="https://forbes400.herokuapp.com/api/forbes400/" title={'Forbes400'}/>
+            <br/>
+            <Examples url="https://forbes400.herokuapp.com/api/forbes400/women" title={'Forbes400 Women'}/>
+            <br />
+            <Examples url="https://forbes400.herokuapp.com/api/forbes400/youngest" title={'Forbes400 Youngest'}/>
+            <br />
+            <Examples url="https://forbes400.herokuapp.com/api/forbes400/industries/technology" title={'Forbes400 Technology Industry'}/>
+            <br />
+            <br />
           </div>
         </div>
       </div>

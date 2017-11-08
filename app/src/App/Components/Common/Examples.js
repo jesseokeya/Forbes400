@@ -5,11 +5,12 @@ import 'whatwg-fetch';
 import '../../../Styles/style.css';
 
 class Examples extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       forbes400Youngest: [],
-      url: 'https://forbes400.herokuapp.com/api/forbes400/industries/technology'
+      url: props.url,
+      title: props.title
     }
   }
 
@@ -34,12 +35,14 @@ class Examples extends Component {
   }
   render() {
     return (<div className="card shadow" style={{
-        maxHeight: '70vh',
-        overflow: 'scroll'
+        maxHeight: '75vh',
+        overflow: 'scroll',
       }}>
       <div className="card-body">
         <h4 className="card-title text-center">
-          <a className="badge badge-dark text-white">Richest People In Technology</a>
+          <a style={{
+            padding: '17px'
+          }} className="badge badge-dark text-white">{this.state.title}</a>
         </h4>
         <br />
         {
