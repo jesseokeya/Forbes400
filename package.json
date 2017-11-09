@@ -6,8 +6,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js",
-    "build": "cd app && npm run build"
+    "server": "nodemon server.js",
+    "build": "cd app && npm run build",
+    "start": "cd app && npm start"
   },
   "repository": {
     "type": "git",

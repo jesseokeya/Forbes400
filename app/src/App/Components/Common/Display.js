@@ -9,6 +9,18 @@ class Display extends Component {
     }
   }
 
+  setSquareImage(data) {
+    let result = null;
+    if (!data.squareImage && data.gender === 'F') {
+      result = '/woman.svg';
+    } else if (!data.squareImage && data.gender === 'M') {
+      result = '/man.svg';
+    } else {
+      result = data.squareImage
+    }
+    return result;
+  }
+
   render() {
     return (<table className="table table-striped">
       <thead className="thead-light">
@@ -28,12 +40,12 @@ class Display extends Component {
           this.state.data.map((value, index) => {
             return (<tr key={index}>
               <th scope="row">
-              <img src={value.squareImage} className="rounded float-left" alt="profile"  width="100" height="100"/>
+                <img src={this.setSquareImage(value)} className="rounded float-left" alt="profile" width="100" height="100"/>
               </th>
               <td>
                 <span className="shift badge badge-pill badge-info" style={{
-                  fontSize: '18px'
-                }}>
+                    fontSize: '18px'
+                  }}>
                   {index + 1}
                 </span>
               </td>
