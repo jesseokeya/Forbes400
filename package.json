@@ -5,7 +5,7 @@
   "description": "A simple json api that provides the forbes 400 list ",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "nodemon --exec mocha --recursive",
     "server": "nodemon server.js",
     "build": "cd app && npm run build",
     "start": "cd app && npm start"
@@ -17,11 +17,9 @@
   "keywords": [
     "Javascript",
     "Api",
-    "Cheerio",
     "Npm",
     "ExpressJs",
-    "NodeJs",
-    "Request"
+    "NodeJs"
   ],
   "author": "Jesse Okeya",
   "license": "ISC",
@@ -30,10 +28,15 @@
   },
   "homepage": "https://github.com/jesseokeya/Forbes400#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "cors": "^2.8.4",
     "express": "^4.16.2",
     "morgan": "^1.9.0",
     "request": "^2.83.0",
     "sort-array": "^2.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^4.1.0",
+    "supertest": "^3.0.0"
   }
 }
