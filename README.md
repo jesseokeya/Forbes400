@@ -1,9 +1,9 @@
 # Forbes400
 JSON Api Of The Forbes 400 Richest People List `Version 0.0.0` <br /> 
-[https://forbes400.herokuapp.com`](https://forbes400.herokuapp.com) 
+[https://forbes400.herokuapp.com](https://forbes400.herokuapp.com) 
 
 ## Documentation
-see full documentation on website [https://forbes400.herokuapp.com`](https://forbes400.herokuapp.com) 
+see full documentation on website [https://forbes400.herokuapp.com](https://forbes400.herokuapp.com) 
 
 ### Prerequisites
 ```
