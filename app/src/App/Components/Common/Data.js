@@ -33,6 +33,13 @@ const data = [
     description: "Returns a Json Object geolocation of the richest people in the forbes 400 in descending order of rank and a valid google geolocation link with api baked in",
     params: "null",
     resource: "https://www.forbes.com/forbes-400/list/"
+  },
+  {
+    path: '/forbes400/getAllBillionaires',
+    url: "https://forbes400.herokuapp.com/api/forbes400/getAllBillionaires",
+    description: "Returns a Json Object of all the billionaires / richest people in the world",
+    params: "null",
+    resource: "https://www.forbes.com/forbes-400/list/"
   }
 ]
 
