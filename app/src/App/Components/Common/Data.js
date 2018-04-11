@@ -1,5 +1,12 @@
 const data = [
   {
+    path: '/api/forbes400?limit=10',
+    url: "https://forbes400.herokuapp.com/api/forbes400?limit=10",
+    description: "Limits the forbes 400 api by the number specified by the limit query on the url",
+    params: "query is ' ?limit=10 ' or any valid number",
+    resource: "https://www.forbes.com/api/forbes-400/list/"
+  },
+  {
     path: '/api/forbes400/',
     url: "https://forbes400.herokuapp.com/api/forbes400/",
     description: "Returns a Json Object Of the richest people in the forbes 400 in descending order of rank",
