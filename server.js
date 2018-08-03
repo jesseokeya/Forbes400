@@ -16,6 +16,7 @@ const urlencodedParser = bodyParser.urlencoded({ extended: true });
 
 app.use((req, res, next) => {
   log.info(`Time: ${ new Date().toLocaleString() }`)
+  next()
 })
 
 app.use(cors());
