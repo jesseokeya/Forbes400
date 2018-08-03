@@ -15,7 +15,8 @@ const jsonParser = bodyParser.json()
 const urlencodedParser = bodyParser.urlencoded({ extended: true });
 
 app.use((req, res, next) => {
-  log.info(`date -> ${ new Date().toLocaleString() }`)
+  log.info(`date -> ${new Date().toLocaleString()}`)
+  log.info(`user-agent -> ${req.headers['user-agent']}`)
   next()
 })
 
