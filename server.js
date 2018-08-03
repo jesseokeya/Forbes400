@@ -1,5 +1,5 @@
 const express = require('express');
-const logger = require('custom-logger')
+const log = require('custom-logger')
 const logger = require('morgan');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -15,7 +15,7 @@ const jsonParser = bodyParser.json()
 const urlencodedParser = bodyParser.urlencoded({ extended: true });
 
 app.use((req, res, next) => {
-  logger.info(`Time: ${ new Date().toLocaleString() }`)
+  log.info(`Time: ${ new Date().toLocaleString() }`)
 })
 
 app.use(cors());
