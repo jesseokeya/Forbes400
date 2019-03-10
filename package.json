@@ -28,10 +28,12 @@
   },
   "homepage": "https://github.com/jesseokeya/Forbes400#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
-    "custom-logger": "^0.3.1",
+    "dotenv": "^6.2.0",
     "express": "^4.16.3",
+    "lodash": "^4.17.11",
     "morgan": "^1.9.0",
     "request": "^2.87.0",
     "sort-array": "^2.0.0"
