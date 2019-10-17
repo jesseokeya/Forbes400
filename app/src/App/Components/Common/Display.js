@@ -38,24 +38,37 @@ class Display extends Component {
       <tbody>
         {
           this.state.data.map((value, index) => {
-            return (<tr key={index}>
-              <th scope="row">
-                <img src={this.setSquareImage(value)} className="rounded float-left" alt="profile" width="100" height="100"/>
-              </th>
-              <td>
-                <span className="shift badge badge-pill badge-info" style={{
-                    fontSize: '18px'
-                  }}>
-                  {index + 1}
-                </span>
-              </td>
-              <td className="bold">{value.name}</td>
-              <td className="bold">{value.worth}</td>
-              <td className="bold">{value.age}</td>
-              <td className="bold">{value.gender}</td>
-              <td className="bold">{value.headquarters}</td>
-              <td className="bold">{value.source}</td>
-            </tr>);
+            return (
+              <tr key={index}>
+                <th scope="row">
+                  <img
+                    src={this.setSquareImage(value)}
+                    className="rounded float-left"
+                    alt="profile"
+                    width="100"
+                    height="100"
+                  />
+                </th>
+                <td>
+                  <span
+                    className="shift badge badge-pill badge-info"
+                    style={{
+                      fontSize: "18px"
+                    }}
+                  >
+                    {index + 1}
+                  </span>
+                </td>
+                <td className="bold">{value.name}</td>
+                <td className="bold">{`${Math.round(
+                  Number(value.finalWorth/1000) * 100
+                ) / 100} B`}</td>
+                <td className="bold">{value.age}</td>
+                <td className="bold">{value.gender}</td>
+                <td className="bold">{value.countryOfCitizenship}</td>
+                <td className="bold">{value.source}</td>
+              </tr>
+            );
           })
         }
       </tbody>
