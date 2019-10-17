@@ -59,7 +59,7 @@ class Display extends Component {
                     {index + 1}
                   </span>
                 </td>
-                <td className="bold">{value.name}</td>
+                <td className="bold">{value.person.name}</td>
                 <td className="bold">{`${Math.round(
                   Number(value.finalWorth / 1000) * 100
                 ) / 100} B`}</td>
