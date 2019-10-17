@@ -7,7 +7,6 @@
   "scripts": {
     "test": "nodemon --exec mocha --recursive",
     "server": "nodemon server.js",
-    "build": "cd app && npm i && npm run build && cd ..",
     "start": "cd app && npm start"
   },
   "repository": {
