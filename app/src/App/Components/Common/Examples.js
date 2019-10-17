@@ -34,24 +34,34 @@ class Examples extends Component {
     }, 100);
   }
   render() {
-    return (<div className="card shadow" style={{
-        maxHeight: '75vh',
-        overflow: 'scroll',
-      }}>
-      <div className="card-body">
-        <h4 className="card-title text-center">
-          <a style={{
-            padding: '17px'
-          }} className="badge badge-dark text-white">{this.state.title}</a>
-        </h4>
-        <br />
-        {
-          (this.state.forbes400Youngest.length > 0)
-            ? <Display data={this.state.forbes400Youngest}/>
-            : <Loader />
-        }
+    return (
+      <div
+        className="card border-light"
+        style={{
+          maxHeight: "100%",
+          overflow: "scroll"
+        }}
+      >
+        <div className="card-body">
+          <h4 className="card-title text-center">
+            <a
+              style={{
+                padding: "17px"
+              }}
+              className="badge badge-dark text-white"
+            >
+              {this.state.title}
+            </a>
+          </h4>
+          <br />
+          {this.state.forbes400Youngest.length > 0 ? (
+            <Display data={this.state.forbes400Youngest} />
+          ) : (
+            <Loader />
+          )}
+        </div>
       </div>
-    </div>);
+    );
   }
 
 }

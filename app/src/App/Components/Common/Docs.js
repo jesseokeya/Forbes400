@@ -7,7 +7,7 @@ class Docs extends Component {
     return (<div className="row">
       {
         data.map((value, index) => {
-          return (<div key={index} className="col-lg-10 col-md-10 card border-dark mb-3 shadow" style={{
+          return (<div key={index} className="col-lg-10 col-md-10 card border-dark mb-3" style={{
               width: '40rem',
               marginLeft: '8%',
               marginRight: '20px',

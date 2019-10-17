@@ -16,28 +16,28 @@ class Display extends Component {
     } else if (!data.squareImage && data.gender === 'M') {
       result = '/man.svg';
     } else {
-      result = data.squareImage
+      result = 'https://' + data.squareImage || data.thumbnail || data.person.squareImage;
     }
     return result;
   }
 
   render() {
-    return (<table className="table table-striped">
-      <thead className="thead-light">
-        <tr>
-          <th scope="col"></th>
-          <th scope="col">Rank</th>
-          <th scope="col">Name</th>
-          <th scope="col">NetWorth</th>
-          <th scope="col">Age</th>
-          <th scope="col">Gender</th>
-          <th scope="col">Residence</th>
-          <th scope="col">Source</th>
-        </tr>
-      </thead>
-      <tbody>
-        {
-          this.state.data.map((value, index) => {
+    return (
+      <table className="table table-striped table-bordered">
+        <thead className="thead-dark">
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Rank</th>
+            <th scope="col">Name</th>
+            <th scope="col">NetWorth</th>
+            <th scope="col">Age</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Residence</th>
+            <th scope="col">Source</th>
+          </tr>
+        </thead>
+        <tbody>
+          {this.state.data.map((value, index) => {
             return (
               <tr key={index}>
                 <th scope="row">
@@ -61,7 +61,7 @@ class Display extends Component {
                 </td>
                 <td className="bold">{value.name}</td>
                 <td className="bold">{`${Math.round(
-                  Number(value.finalWorth/1000) * 100
+                  Number(value.finalWorth / 1000) * 100
                 ) / 100} B`}</td>
                 <td className="bold">{value.age}</td>
                 <td className="bold">{value.gender}</td>
@@ -69,10 +69,10 @@ class Display extends Component {
                 <td className="bold">{value.source}</td>
               </tr>
             );
-          })
-        }
-      </tbody>
-    </table>);
+          })}
+        </tbody>
+      </table>
+    );
   }
 }
 

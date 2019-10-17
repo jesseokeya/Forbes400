@@ -10,7 +10,7 @@ class NavBar extends Component {
   }
 
   render() {
-    return (<nav className="navbar navbar-light bg-info justify-content-between shadow ">
+    return (<nav className="navbar navbar-light bg-dark justify-content-between">
       <a className="navbar-brand text-light">
         <b> {this.state.title} </b>
       </a>
