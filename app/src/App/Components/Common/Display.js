@@ -21,6 +21,10 @@ class Display extends Component {
     return result;
   }
 
+  evalAge(birthDate) {
+    return Math.floor((new Date()).getFullYear() - (new Date(birthDate)).getFullYear())
+  }
+
   render() {
     return (
       <table className="table table-striped table-bordered">
@@ -63,7 +67,7 @@ class Display extends Component {
                 <td className="bold">{`${Math.round(
                   Number(value.finalWorth / 1000) * 100
                 ) / 100} B`}</td>
-                <td className="bold">{value.age}</td>
+                <td className="bold">{this.evalAge(value.birthDate)}</td>
                 <td className="bold">{value.gender}</td>
                 <td className="bold">{value.countryOfCitizenship}</td>
                 <td className="bold">{value.source}</td>
