@@ -67,7 +67,7 @@ class Display extends Component {
                 <td className="bold">{`${Math.round(
                   Number(value.estWorthPrev / 1000) * 100
                 ) / 100} B`}</td>
-                <td className="bold">{this.evalAge(value.birthDate)}</td>
+                <td className="bold">{(value && value.birthDate) && this.evalAge(value.birthDate)}</td>
                 <td className="bold">{value.gender}</td>
                 <td className="bold">{value.countryOfCitizenship}</td>
                 <td className="bold">{value.source}</td>
