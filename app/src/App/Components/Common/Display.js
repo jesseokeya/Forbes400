@@ -9,14 +9,24 @@ class Display extends Component {
     }
   }
 
+  normalizeUrl(context) {
+    if (!context) return null
+    if (context && context.includes('http')) return context
+    return `https://${context}`
+  }
+
   setSquareImage(data) {
     let result = null;
-    if (!data.squareImage && data.gender === 'F') {
+    const imageExists = data.squareImage || data.person.imageExists
+    const normalizeUrl = this.normalizeUrl
+    if (!imageExists && data.gender === 'F') {
+      console.log(data)
       result = '/woman.svg';
-    } else if (!data.squareImage && data.gender === 'M') {
+    } else if (!imageExists  && data.gender === 'M') {
+      console.log(data)
       result = '/man.svg';
     } else {
-      result = 'https://' + data.squareImage || data.thumbnail || data.person.squareImage;
+      result = normalizeUrl(data.squareImage) || normalizeUrl(data.person.squareImage) || normalizeUrl(data.thumbnail);
     }
     return result;
   }
