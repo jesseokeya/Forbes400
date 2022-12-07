@@ -6,7 +6,7 @@
   "main": "server.js",
   "scripts": {
     "test": "nodemon --exec mocha --recursive",
-    "server": "nodemon server.js",
+    "server": "node server.js",
     "start": "cd app && npm start"
   },
   "repository": {
