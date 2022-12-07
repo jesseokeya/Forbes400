@@ -10,8 +10,8 @@ see full documentation on website [https://forbes400.onrender.com](https://forbe
 Javascript
 ```
 ### Snippet
-<img src="https://forbes400.herokuapp.com/screenshot1.png" width="450" height="350">
-<img src="https://forbes400.herokuapp.com/screenshot2.png" width="450" height="350">
+<img src="https://forbes400.onrender.com/screenshot1.png" width="450" height="350">
+<img src="https://forbes400.onrender.com/screenshot2.png" width="450" height="350">
 
 ### Excecuting
 ```

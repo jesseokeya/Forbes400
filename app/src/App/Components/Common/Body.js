@@ -1,10 +1,9 @@
-import React, {Component} from 'react';
-import {Docs} from './Docs';
-import {Examples} from './Examples';
-import '../../../Styles/style.css';
+import React, { Component } from "react";
+import { Docs } from "./Docs";
+import { Examples } from "./Examples";
+import "../../../Styles/style.css";
 
 class Body extends Component {
-
   componentDidMount() {
     document.getElementById("docs-tab").click();
   }
@@ -62,27 +61,27 @@ class Body extends Component {
             <br />
             <div className="container-fluid">
               <Examples
-                url="https://forbes400.herokuapp.com/api/forbes400/real-time?limit=10"
+                url="https://forbes400.onrender.com/api/forbes400/real-time?limit=10"
                 title={"Forbes400 Real Time"}
               />
               <br />
               <Examples
-                url="https://forbes400.herokuapp.com/api/forbes400/industries/fashion?limit=10"
+                url="https://forbes400.onrender.com/api/forbes400/industries/fashion?limit=10"
                 title={"Forbes400 Fashion Industry"}
               />
               <br />
               <Examples
-                url="https://forbes400.herokuapp.com/api/forbes400/youngest?limit=10"
+                url="https://forbes400.onrender.com/api/forbes400/youngest?limit=10"
                 title={"Forbes400 Youngest"}
               />
               <br />
               <Examples
-                url="https://forbes400.herokuapp.com/api/forbes400/women?limit=10"
+                url="https://forbes400.onrender.com/api/forbes400/women?limit=10"
                 title={"Forbes400 Women"}
               />
               <br />
               <Examples
-                url="https://forbes400.herokuapp.com/api/forbes400/oldest?limit=10"
+                url="https://forbes400.onrender.com/api/forbes400/oldest?limit=10"
                 title={"Forbes400 Oldest"}
               />
               <br />
@@ -97,6 +96,4 @@ class Body extends Component {
   }
 }
 
-export {
-  Body
-}
+export { Body };
